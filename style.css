@@ -27,6 +27,10 @@ html{
     scroll-behavior: smooth;
 }
 
+resultsContainer.innerHTML{
+    font-size: 20px;
+}
+
 section{
     padding: 2rem 9%;
 }
@@ -92,6 +96,7 @@ header .logo i{
 
 }
 
+
 header .navbar a{
     font-size: 1.7rem;
     border-radius: .5rem;
@@ -132,8 +137,292 @@ header .icons #menu-bars{
 
 }
 
+/* Fixes for swiper layout */
+.home .swiper-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 2rem;
+}
 
-#search-form{
+.home .swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.home .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 40rem;
+    box-sizing: border-box;
+}
+
+.home .slide .content {
+    flex: 1 1 40rem;
+}
+
+.home .slide .image {
+    flex: 1 1 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .slide .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .home .slide {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Dropdown wrapper */
+.like-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content box */
+.liked-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Show the dropdown when active */
+.like-dropdown.active .liked-dropdown-content {
+  display: block;
+}
+
+/* Liked items styling */
+.liked-dropdown-content h4 {
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.liked-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.liked-item {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.liked-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.liked-item h4 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.liked-item span {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.85rem;
+}
+
+/* Trash/Delete icon */
+.liked-item .delete-icon {
+  margin-left: auto;
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.liked-item .delete-icon:hover {
+  color: red;
+}
+
+
+/* Cart Dropdown */
+.cart-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.cart-dropdown.active .cart-dropdown-content {
+  display: block;
+}
+
+/* Cart Items */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cart-item h4 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.cart-item span {
+  font-weight: 600;
+  color: #444;
+  font-size: 0.85rem;
+}
+
+.cart-item .delete-cart-icon {
+  margin-left: auto;
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.cart-item .delete-cart-icon:hover {
+  color: red;
+}
+
+.buy-now-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.buy-now-btn:hover {
+  background-color: #219150;
+}
+
+.total-price {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.checkout-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.checkout-content h3 {
+  margin-bottom: 15px;
+}
+
+.checkout-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-order-btn {
+  background-color: #27ae60;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.cart-items-list {
+  margin-bottom: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.cart-items-list label {
+  display: block;
+  margin: 5px 0;
+}
+
+
+#search-form {
     position: fixed;
     top: -110%;
     left: 0;
@@ -145,14 +434,14 @@ header .icons #menu-bars{
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
+    transition: 0.5s ease;
 }
 
-#search-form.active{
+#search-form.active {
     top: 0;
-
 }
 
-#search-form #search-box{
+#search-form #search-box {
     width: 50rem;
     border-bottom: .1rem solid #fff;
     padding: 1rem 0;
@@ -162,27 +451,26 @@ header .icons #menu-bars{
     background: none;
 }
 
-#search-form #search-box::placeholder{
+#search-form #search-box::placeholder {
     color: #eee;
-
 }
 
-#search-form #search-box::-webkit-search-cancel-button{
+#search-form #search-box::-webkit-search-cancel-button {
     -webkit-appearance: none;
-    
 }
 
-#search-form label{
+#search-form label {
     color: #fff;
     cursor: pointer;
     font-size: 3rem;
+    margin-left: 1rem;
 }
 
-#search-form label:hover{
-    color:var(--green);
+#search-form label:hover {
+    color: var(--green);
 }
 
-#search-form #close{
+#search-form #close {
     position: absolute;
     color: #fff;
     cursor: pointer;
@@ -190,6 +478,113 @@ header .icons #menu-bars{
     right: 3rem;
     font-size: 5rem;
 }
+
+#search-results .box, #search-results .slide {
+  border: 2px solid #fff;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+/* The Modal (background) */
+.search-modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 10000; /* On top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; /* Enable scroll */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content Box */
+.search-modal-content {
+  background-color: #222;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  color: #fff;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search-modal-content .box {
+  width: 100%; /* Full width inside modal container */
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.search-modal-content .box img {
+  width: 100px; /* Fixed size for images */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.search-modal-content .box h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+.search-modal-content .box span {
+  font-weight: bold;
+  color: var(--green, #4CAF50);
+}
+
+.search-modal-content .box .btn {
+  padding: 6px 12px;
+  background: var(--green, #4CAF50);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+#search-results-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/* Limit and style images ONLY inside search results */
+#search-results-container img {
+    width: 180px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    /* margin: 0 auto; */
+}
+
+
+
+
+
 
 .home .home-slider .slide{
     display: flex;
@@ -635,81 +1030,231 @@ header .icons #menu-bars{
 
 
 
+/* MEDIA QUERIES - Responsive Design */
 
-/* media queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
 
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-
-    header{
-        padding: 1rem 2rem;
-    }
-
-    section{
-        padding:2rem;
-    }
-    
+  .home .slide .content h3 {
+    font-size: 5.5rem;
+  }
 }
 
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
 
-@media (max-width:768px){
+  header {
+    padding: 1rem 2rem;
+  }
 
-    header .icons #menu-bars{
-        display: inline-block;
-    }
+  section {
+    padding: 2rem;
+  }
 
-    header .navbar{
-        position: absolute;
-        top:100%;
-        left:0;
-        right:0;
-        background: #fff;
-        border-top: .1rem solid rgba(0,0,0,.2);
-        border-bottom: .1rem solid rgba(0,0,0,.2);
-        padding: 1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
+  .home .slide {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+  .home .slide .image img {
+    max-width: 100%;
+    height: auto;
+  }
 
-    header .navbar a{
-        display: block;
-        padding: 1.5rem;
-        margin: 1rem ;
-        font-size: 2rem;
-        background: #eee;
+  .search-modal-content {
+    width: 90%;
+  }
 
-    }
+  .search-modal-content .box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    #search-form #search-box{
-        width: 90%;
-        margin: 0 1rem;
-    }
-
-    .home .home-slider .slide .content h3{
-        font-size: 5rem;
-    }
+  .search-modal-content .box img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-@media (max-width:450px){
+@media (max-width: 768px) {
+  header .icons #menu-bars {
+    display: inline-block;
+  }
 
-    html{
-        font-size: 50%;
-    }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+  }
 
-    .dishes .box-container .box img{
-        height: auto;
-        width: 100%;
-    }
+  header .navbar.active {
+    display: flex;
+  }
 
-    .order form .inputBox .input{
-        width: 100%;
-    }
-    
-    
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    background: #eee;
+    width: 100%;
+  }
+
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
+    font-size: 2.5rem;
+  }
+
+  .home .slide .content h3 {
+    font-size: 4rem;
+  }
+
+  .search-modal-content {
+    width: 95%;
+  }
+
+  .search-modal-content .box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-modal-content .box img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .liked-item img,
+  .cart-item img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 52%;
+  }
+
+  .home .slide .content h3 {
+    font-size: 3.5rem;
+  }
+
+  .search-modal-content h3 {
+    font-size: 2rem;
+  }
+
+  .search-modal-content .box h3 {
+    font-size: 1.1rem;
+  }
+
+  .search-modal-content .box img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #search-form #search-box {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .dishes .box-container .box img {
+    height: auto;
+    width: 100%;
+  }
+
+  .order form .inputBox .input {
+    width: 100%;
+  }
+
+  .search-modal-content .box {
+    flex-direction: column;
+  }
+
+  .search-modal-content .box img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+}
+
+/* 0. Base Defaults for Mobile-First Design */
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#search-form,
+.search-modal {
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
+
+/* 1. Header & Navbar Behavior Up To 768px */
+@media (max-width: 768px) {
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+  }
+  header .navbar.active {
+    display: flex;
+  }
+}
+
+/* 2. Search Form & Modal Imagery Scaling */
+@media (max-width: 576px) {
+  #search-form #search-box {
+    font-size: 2.2rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.8rem;
+  }
+  .search-modal-content,
+  #search-results-container {
+    padding: 1rem;
+  }
+  .search-modal-content .box,
+  #search-results-container .box {
+    padding: 0.5rem;
+  }
+  .search-modal-content .box img,
+  #search-results-container .box img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
+/* 3. Swiper Slide Text Scaling for Small Screens */
+@media (max-width: 576px) {
+  .home .slide .content h3 {
+    font-size: 3.5rem;
+  }
 }
