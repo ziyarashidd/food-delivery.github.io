@@ -466,20 +466,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const swiperContainer = document.querySelector('.swiper-container');
-const slides = swiperContainer.querySelectorAll('.swiper-slide').length;
+// const swiperContainer = document.querySelector('.swiper-container');
+// const slides = swiperContainer.querySelectorAll('.swiper-slide').length;
 
-const slidesPerView = 3; // your current setting
-const slidesPerGroup = 3; // your current setting
+// const slidesPerView = 3; // your current setting
+// const slidesPerGroup = 3; // your current setting
 
-const loopEnabled = slides >= slidesPerView && slides >= slidesPerGroup;
+// const loopEnabled = slides >= slidesPerView && slides >= slidesPerGroup;
 
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: slidesPerView,
-  slidesPerGroup: slidesPerGroup,
-  loop: loopEnabled,
-  // other parameters...
-});
+// const swiper = new Swiper('.swiper-container', {
+//   slidesPerView: slidesPerView,
+//   slidesPerGroup: slidesPerGroup,
+//   loop: loopEnabled,
+//   // other parameters...
+// });
 
 
 
