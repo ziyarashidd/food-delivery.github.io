@@ -15,7 +15,7 @@
 
 <body>
 
-    <!-- header section starts -->
+    <!-- Header Section Starts -->
     <header>
         <a href="#" class="logo"><i class="fas fa-utensils"></i>resto.</a>
 
@@ -25,48 +25,74 @@
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
             <a href="#review">Review</a>
-            <a href="#order">order</a>
+            <a href="#order">Order</a>
         </nav>
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
             <i class="fas fa-search" id="search-icon"></i>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart" ></a>
+
+
+
+
+            <!-- Liked Items Dropdown -->
+            <div class="like-dropdown">
+                <a href="#" class="fas fa-heart" id="liked-icon"></a>
+                <div class="liked-dropdown-content" id="liked-dropdown">
+                    <h4>Your Liked Items</h4>
+                    <div class="liked-container" id="liked-container-header"></div>
+                </div>
+            </div>
+
+            <!-- Cart Items Dropdown -->
+            <div class="cart-dropdown">
+                <a href="#" class="fas fa-shopping-cart" id="cart-icon"></a>
+                <div class="cart-dropdown-content" id="cart-dropdown">
+                    <h4>Your Cart</h4>
+                    <div class="cart-container" id="cart-container-header"></div>
+                    <p class="total-price">Total: $<span id="cart-total">0.00</span></p>
+                    <button id="buy-now-btn" class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+
+            
 
         </div>
-
-
-
     </header>
 
-    <!-- header section end  -->
 
-    <!-- search-form  -->
 
-    <form action="" id="search-form">
-        <input type="search" placeholder="search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
+    <!-- Search Form -->
+    <form action="javascript:void(0);" id="search-form">
+        <input type="search" placeholder="Search here..." id="search-box">
+        <label for="search-box" class="fas fa-search" id="search-btn"></label>
         <i class="fas fa-times" id="close"></i>
     </form>
+
+    <!-- Search Results Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <span id="close-search-modal" class="close">&times;</span>
+            <h3 style="font-size: 30px;">Search Results</h3>
+            <div id="search-results-container"></div>
+        </div>
+    </div>
+
 
     <!-- home section starts  -->
 
     <section class="home" id="home">
-
-        <div class="swiper-container home-slider">
-
-            <div class="swiper-wrapper wrapper">
-
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
                 <div class="swiper-slide slide">
                     <div class="content">
                         <span>our special dish</span>
                         <h3>spicy noodles</h3>
-                        <p>A burning sensation spreads across the lips and ignites the tongue.Mucous membranes.</p>
+                        <p>A burning sensation spreads across the lips and ignites the tongue.</p>
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="image/noodles.png" alt="" style=" width: 80.2%; height: 34.1rem; ">
+                        <img src="image/noodles.png" alt="">
                     </div>
                 </div>
 
@@ -74,11 +100,11 @@
                     <div class="content">
                         <span>our special dish</span>
                         <h3>fried chicken</h3>
-                        <p>This can also inhibit how much serotonin is produced in the communicated with the brain.</p>
+                        <p>This can also inhibit how much serotonin is produced.</p>
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="image/pngkey.com-chicken-png-111572.png" alt="" style="width: 99.2%; height: 34.1rem;">
+                        <img src="image/pngkey.com-chicken-png-111572.png" alt="">
                     </div>
                 </div>
 
@@ -86,23 +112,23 @@
                     <div class="content">
                         <span>our special dish</span>
                         <h3>hot pizza</h3>
-                        <p>When you eat pizza, your brain endorphins, the feel-good hormones that make you happy.</p>
+                        <p>When you eat pizza, your brain releases feel-good hormones.</p>
                         <a href="#" class="btn">order now</a>
                     </div>
                     <div class="image">
-                        <img src="image/pizza.png" alt="" style="width: 83.2%; height: 48.1rem;">
+                        <img src="image/pizza.png" alt="">
                     </div>
                 </div>
             </div>
 
             <div class="swiper-pagination"></div>
-
         </div>
-
     </section>
 
 
+
     <!-- home section end -->
+
 
     <!-- dishes section starts -->
 
@@ -223,15 +249,18 @@
         <h1 class="heading"> why choose us? </h3>
 
             <div class="row">
-                
+
                 <div class="image">
                     <img src="image/pngkey.com-chicken-png-111572.png" alt="">
                 </div>
 
                 <div class="content">
                     <h3>best food in the country</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis itaque quo provident magnam maxime doloribus illum sequi, sapiente veniam magni omnis dicta. Aperiam.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis id mollitia, deleniti repudiandae soluta tempore dignissimos repellendus expedita, cupiditate architecto nesciunt suscipit!</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis itaque quo provident magnam
+                        maxime doloribus illum sequi, sapiente veniam magni omnis dicta. Aperiam.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi perspiciatis id mollitia, deleniti
+                        repudiandae soluta tempore dignissimos repellendus expedita, cupiditate architecto nesciunt
+                        suscipit!</p>
                     <div class="icons-container">
                         <div class="icons">
                             <i class="fas fa-shipping-fast"></i>
@@ -255,12 +284,12 @@
 
 
 
-     <!-- about section ends -->
+    <!-- about section ends -->
 
 
-     <!-- menu section starts -->
+    <!-- menu section starts -->
 
-     <section class="menu" id="menu">
+    <section class="menu" id="menu">
 
         <h3 class="sub-heading">our menu</h3>
         <h1 class="heading"> today's speciality </h3>
@@ -268,199 +297,199 @@
             <div class="box-container">
 
                 <div class="box">
-                <div class="image">
-                    <img src="image/pizza-386717_640.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                    <div class="image">
+                        <img src="image/pizza-386717_640.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
                     </div>
-                    <h3>delicious food</h3>
-                    <p>your brain endorphins, the feel-good hormones that make you happy.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>your brain endorphins, the feel-good hormones that make you happy.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
                 </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/burger1.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>A rare burger will feel soft, between your thumb and palm when your hand is flat..</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/dosa.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>fermented rice and lentil batter,dosa is a healthy breakfast option for people.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/cake3.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>Filling is a thick mixture which is used between the layers of cake.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/cake4.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>It may be some of the frosting to which nuts, marshmallows or fruits are added.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/cake5.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p>Whipped cream and custard mixtures are sometimes used for fillings.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/juse.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p> it doesn't deliver enough to warrant daily consumption juice offers some nutritional.</p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/junk food.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p> That's healthy food is high in sugar and . A better option for reaping fruit's health </p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="image/juse2.jpg" alt="">
+                        <a href="#" class="fas fa-heart"></a>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>delicious food</h3>
+                        <p> That's because juice is high in sugar and . A better option for reaping fruit's health </p>
+                        <a href="#" class="btn">add to cart</a>
+                        <span class="price">$12.99</span>
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="box">
-                <div class="image">
-                    <img src="image/burger1.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p>A rare burger will feel soft,  between your thumb and palm when your hand is flat..</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/dosa.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p>fermented rice and lentil batter,dosa is a healthy breakfast option for people.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            
-            <div class="box">
-                <div class="image">
-                    <img src="image/cake3.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p>Filling is a thick mixture which is used between the layers of cake.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
+    </section>
 
 
-            <div class="box">
-                <div class="image">
-                    <img src="image/cake4.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p>It may be some of the frosting to which nuts, marshmallows or fruits are added.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/cake5.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p>Whipped cream and custard mixtures are sometimes used for fillings.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/juse.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p> it doesn't deliver enough to warrant daily consumption juice offers some nutritional.</p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/junk food.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p> That's healthy food is high in sugar and . A better option for reaping fruit's health </p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/juse2.jpg" alt="">
-                    <a href="#" class="fas fa-heart"></a>
-                </div>
-                <div class="content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <h3>delicious food</h3>
-                    <p> That's because juice is high in sugar and . A better option for reaping fruit's health </p>
-                    <a href="#" class="btn">add to cart</a>
-                    <span class="price">$12.99</span>
-                </div>
-            </div>
+    <!-- menu section ends -->
 
 
-        </div>
+    <!-- review section starts -->
 
-     </section>
-
-
-     <!-- menu section ends -->
-
-
-     <!-- review section starts -->
-
-     <section class="review" id="review">
+    <section class="review" id="review">
 
         <h3 class="sub-heading">customer's review</h3>
         <h1 class="heading"> what thay say </h3>
@@ -481,10 +510,12 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
-                                </div>  
+                                </div>
                             </div>
                         </div>
-                        <p>I have been web developer from last 1 years but most of the times I have been writing HTML+CSS+java script translating designs to web pages. I love my work and I see a lot of scope/demand just by writing html,CSS,java script.</p>
+                        <p>I have been web developer from last 1 years but most of the times I have been writing
+                            HTML+CSS+java script translating designs to web pages. I love my work and I see a lot of
+                            scope/demand just by writing html,CSS,java script.</p>
                     </div>
 
                     <div class="swiper-slide slide">
@@ -499,10 +530,13 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
-                                </div>  
+                                </div>
                             </div>
                         </div>
-                        <p>Shradha Khapra has become famous at a very young age. She is popularly known as 'Microsoft Wali Didi' or 'Shraddha Didi'. Shradha Khapra is the founder of 'Apna College' YouTube channel. She uses her channel to post educational content Shradha Khapra is the founder of 'Apna College.</p>
+                        <p>Shradha Khapra has become famous at a very young age. She is popularly known as 'Microsoft
+                            Wali Didi' or 'Shraddha Didi'. Shradha Khapra is the founder of 'Apna College' YouTube
+                            channel. She uses her channel to post educational content Shradha Khapra is the founder of
+                            'Apna College.</p>
                     </div>
 
                     <div class="swiper-slide slide">
@@ -517,10 +551,13 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
-                                </div>  
+                                </div>
                             </div>
                         </div>
-                        <p>Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the co-founder and CEO of Tesla, Elon leads all product design, engineering and global manufacturing of the company's electric vehicles, battery products and solar energy products.</p>
+                        <p>Elon Musk co-founded and leads Tesla, SpaceX, Neuralink and The Boring Company. As the
+                            co-founder and CEO of Tesla, Elon leads all product design, engineering and global
+                            manufacturing of the company's electric vehicles, battery products and solar energy
+                            products.</p>
                     </div>
 
                     <div class="swiper-slide slide">
@@ -535,24 +572,86 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
-                                </div>  
+                                </div>
                             </div>
                         </div>
-                        <p>Sundar Pichai, the Chief Executive Officer (CEO) of Alphabet is one of the most highly compensated professionals in the world. In 2022, the 50-year-old tech leader took away a whopping $226 million in compensation, which included $218 million in stock awards.</p>
+                        <p>Sundar Pichai, the Chief Executive Officer (CEO) of Alphabet is one of the most highly
+                            compensated professionals in the world. In 2022, the 50-year-old tech leader took away a
+                            whopping $226 million in compensation, which included $218 million in stock awards.</p>
                     </div>
                 </div>
             </div>
 
 
-     </section>
+    </section>
 
 
 
-     <!-- review section end  -->
+    <!-- review section end  -->
 
-     <!-- order section starts -->
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <span class="close-btn" id="close-checkout">&times;</span>
+            <h3>Checkout</h3>
+            <form id="checkout-form">
+                <div class="cart-items-list" id="checkout-items-list">
+                    <!-- Dynamically filled checkboxes of items -->
+                </div>
 
-     <section class="order" id="order">
+                <div class="inputBox">
+                    <div class="input">
+                        <span>your name</span>
+                        <input type="text" placeholder="enter your name">
+                    </div>
+                    <div class="input">
+                        <span>your number</span>
+                        <input type="number" placeholder="enter your number">
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div class="input">
+                        <span>your order</span>
+                        <input type="text" placeholder="enter your food name">
+                    </div>
+                    <div class="input">
+                        <span>additional food</span>
+                        <input type="text" placeholder="extra with food">
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div class="input">
+                        <span>how much</span>
+                        <input type="number" placeholder="how many orders">
+                    </div>
+                    <div class="input">
+                        <span>date and time</span>
+                        <input type="datetime-local">
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div class="input">
+                        <span>your address</span>
+                        <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="input">
+                        <span>your message</span>
+                        <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-order-btn">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- order section starts -->
+
+    <section class="order" id="order">
 
         <h3 class="sub-heading">order now</h3>
         <h1 class="heading">free and fast </h3>
@@ -607,15 +706,15 @@
 
             </form>
 
-     </section>
+    </section>
 
 
 
-     <!-- order section end -->
+    <!-- order section end -->
 
-     <!-- footer section starts -->
+    <!-- footer section starts -->
 
-     <section class="footer">
+    <section class="footer">
 
         <div class="box-container">
 
@@ -657,25 +756,14 @@
         </div>
 
         <div class="credit"> copyright @ 2023 by <span>mr.ziya rashid. web designer</span></div>
-     </section>
-     <!-- footer section ends  --> 
+    </section>
+    <!-- footer section ends  -->
 
 
-<!-- loader part  -->
- <!-- <div class="loader-container">
+    <!-- loader part  -->
+    <!-- <div class="loader-container">
     <img src="loder.gif" alt="">
 </div> -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 
